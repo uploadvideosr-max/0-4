@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balkan Media – Ostale aplikacije</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+body{
+  margin:0;
+  padding:30px 20px;
+  font-family:'Montserrat',sans-serif;
+  background:linear-gradient(135deg,#1f1c2c,#928dab);
+  color:#fff;
+  min-height:100vh;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
+}
+
+/* INTRO */
+.intro{
+  margin-bottom:40px;
+}
+
+.logo{
+  width:100px;
+  height:100px;
+  margin-bottom:15px;
+  animation: blink 5s linear infinite;
+}
+
+h1{
+  font-size:34px;
+  margin:0;
+  background:linear-gradient(90deg,#00e676,#00c853);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* GRID */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.12);
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.35);
+  transition:0.3s;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card img{
+  width:80px;
+  height:80px;
+  margin:auto;
+  margin-bottom:15px;
+}
+
+.card h3{
+  font-size:18px;
+  margin-bottom:15px;
+  min-height:48px;
+}
+
+/* BUTTON */
+.btn{
+  display:block;
+  padding:12px;
+  border-radius:12px;
+  background:#00e676;
+  color:#003300;
+  font-weight:700;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#00c853;
+  transform:scale(1.05);
+}
+
+/* LOGO BLINK */
+@keyframes blink{
+  0%,50%,100%{opacity:1;}
+  25%,75%{opacity:0.3;}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  h1{font-size:26px;}
+  .logo{width:70px;height:70px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="intro">
+    <img src="images/logo.png" class="logo">
+    <h1>📦 Ostale aplikacije</h1>
+  </div>
+
+  <div class="cards">
+
+    <!-- Aplikacija 1 -->
+    <div class="card">
+      <img src="images/app1.png">
+      <h3>Naziv aplikacije 1</h3>
+      <a href="#" class="btn">Preuzmi</a>
+    </div>
+
+    <!-- Aplikacija 2 -->
+    <div class="card">
+      <img src="images/app2.png">
+      <h3>Naziv aplikacije 2</h3>
+      <a href="#" class="btn">Preuzmi</a>
+    </div>
+
+    <!-- Aplikacija 3 -->
+    <div class="card">
+      <img src="images/app3.png">
+      <h3>Naziv aplikacije 3</h3>
+      <a href="#" class="btn">Preuzmi</a>
+    </div>
+
+    <!-- Aplikacija 4 -->
+    <div class="card">
+      <img src="images/app4.png">
+      <h3>Naziv aplikacije 4</h3>
+      <a href="#" class="btn">Preuzmi</a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
