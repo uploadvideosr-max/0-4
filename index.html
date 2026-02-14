@@ -59,10 +59,9 @@ h1{
   border-radius:18px;
   padding:20px;
   box-shadow:0 6px 20px rgba(0,0,0,0.35);
-  transition:0.3s;
+  transition:.3s;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
 }
 
 .card:hover{
@@ -79,25 +78,50 @@ h1{
 
 .card h3{
   font-size:18px;
-  margin-bottom:15px;
+  margin-bottom:10px;
   min-height:48px;
 }
 
-/* BUTTON */
-.btn{
-  display:block;
-  padding:12px;
-  border-radius:12px;
-  background:#00e676;
-  color:#003300;
-  font-weight:700;
-  text-decoration:none;
-  transition:0.3s;
+/* DOWNLOADER BOX */
+.downloader{
+  background:rgba(0,0,0,0.35);
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:10px;
+  font-weight:600;
+  letter-spacing:1px;
 }
 
-.btn:hover{
+/* BUTTONS */
+.btn{
+  padding:10px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  margin-top:6px;
+  display:block;
+  transition:.3s;
+}
+
+/* PREUZMI */
+.download{
+  background:#00e676;
+  color:#003300;
+}
+
+.download:hover{
   background:#00c853;
-  transform:scale(1.05);
+}
+
+/* KOPIRAJ */
+.copy{
+  background:#2962ff;
+  color:#fff;
+  cursor:pointer;
+}
+
+.copy:hover{
+  background:#0039cb;
 }
 
 /* LOGO BLINK */
@@ -126,37 +150,71 @@ h1{
 
   <div class="cards">
 
-    <!-- Aplikacija 1 -->
+    <!-- APP 1 -->
     <div class="card">
       <img src="images/app1.png">
-      <h3>Naziv aplikacije 1</h3>
-      <a href="#" class="btn">Preuzmi</a>
+      <h3>Aplikacija 1</h3>
+
+      <div class="downloader">Downloader kod: <span id="code1">123456</span></div>
+
+      <div class="btn copy" onclick="copyCode('code1')">Kopiraj kod</div>
+
+      <a href="https://vaslink.com/app1.apk" class="btn download">Preuzmi</a>
     </div>
 
-    <!-- Aplikacija 2 -->
+    <!-- APP 2 -->
     <div class="card">
       <img src="images/app2.png">
-      <h3>Naziv aplikacije 2</h3>
-      <a href="#" class="btn">Preuzmi</a>
+      <h3>Aplikacija 2</h3>
+
+      <div class="downloader">Downloader kod: <span id="code2">654321</span></div>
+
+      <div class="btn copy" onclick="copyCode('code2')">Kopiraj kod</div>
+
+      <a href="https://vaslink.com/app2.apk" class="btn download">Preuzmi</a>
     </div>
 
-    <!-- Aplikacija 3 -->
+    <!-- APP 3 -->
     <div class="card">
       <img src="images/app3.png">
-      <h3>Naziv aplikacije 3</h3>
-      <a href="#" class="btn">Preuzmi</a>
+      <h3>Aplikacija 3</h3>
+
+      <div class="downloader">Downloader kod: <span id="code3">987654</span></div>
+
+      <div class="btn copy" onclick="copyCode('code3')">Kopiraj kod</div>
+
+      <a href="https://vaslink.com/app3.apk" class="btn download">Preuzmi</a>
     </div>
 
-    <!-- Aplikacija 4 -->
+    <!-- APP 4 -->
     <div class="card">
       <img src="images/app4.png">
-      <h3>Naziv aplikacije 4</h3>
-      <a href="#" class="btn">Preuzmi</a>
+      <h3>Aplikacija 4</h3>
+
+      <div class="downloader">Downloader kod: <span id="code4">456789</span></div>
+
+      <div class="btn copy" onclick="copyCode('code4')">Kopiraj kod</div>
+
+      <a href="https://vaslink.com/app4.apk" class="btn download">Preuzmi</a>
     </div>
 
   </div>
 
 </div>
+
+<script>
+function copyCode(id){
+  var text=document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+
+  var btn=event.target;
+  btn.innerText="Broj kopiran";
+
+  setTimeout(()=>{
+    btn.innerText="Kopiraj kod";
+  },2000);
+}
+</script>
 
 </body>
 </html>
