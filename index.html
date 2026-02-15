@@ -86,7 +86,30 @@ height:90px;
 object-fit:contain;
 margin:auto;
 margin-bottom:10px;
+
+/* ANIMACIJA */
+animation: float 4s ease-in-out infinite;
+transition: transform 0.3s ease;
 }
+
+/* kada se pređe mišem */
+.app-logo:hover{
+transform: scale(1.15) rotate(5deg);
+}
+
+/* keyframes animacija */
+@keyframes float{
+0%{
+transform: translateY(0px);
+}
+50%{
+transform: translateY(-10px);
+}
+100%{
+transform: translateY(0px);
+}
+}
+
 
 /* TITLE */
 
