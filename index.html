@@ -9,150 +9,172 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
+
+*{
+box-sizing:border-box
+}
 
 body{
-  margin:0;
-  font-family:'Montserrat',sans-serif;
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color:#fff;
-  text-align:center;
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:#fff;
+text-align:center;
 }
 
 /* HEADER */
+
 header{
-  padding:35px 20px 20px;
+padding:35px 20px 20px;
 }
 
 .main-logo{
-  font-size:44px;
-  font-weight:700;
-  letter-spacing:2px;
-  margin-bottom:15px;
-  animation:colorShift 6s infinite alternate;
+font-size:44px;
+font-weight:700;
+letter-spacing:2px;
+margin-bottom:15px;
+animation:colorShift 6s infinite alternate;
 }
 
 header h1{
-  font-size:36px;
-  margin-bottom:10px;
-  animation:colorShift 4s infinite alternate;
+font-size:36px;
+margin-bottom:10px;
+animation:colorShift 4s infinite alternate;
 }
 
 header p{
-  opacity:.85;
+opacity:.85;
 }
 
 @keyframes colorShift{
-  0%{color:#25d366;text-shadow:0 0 10px #25d366}
-  50%{color:#4da3ff;text-shadow:0 0 10px #4da3ff}
-  100%{color:#ff4d8d;text-shadow:0 0 10px #ff4d8d}
+0%{color:#25d366;text-shadow:0 0 10px #25d366}
+50%{color:#4da3ff;text-shadow:0 0 10px #4da3ff}
+100%{color:#ff4d8d;text-shadow:0 0 10px #ff4d8d}
 }
 
-/* CONTAINER GRID */
+/* GRID */
+
 .container{
-  max-width:1200px;
-  margin:auto;
-  padding:20px;
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap:20px;
+max-width:1200px;
+margin:auto;
+padding:20px;
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap:20px;
 }
 
-/* APP CARD */
+/* CARD */
+
 .app{
-  background:rgba(255,255,255,0.08);
-  border-radius:22px;
-  padding:20px;
-  backdrop-filter:blur(10px);
-  transition:.4s;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+background:rgba(255,255,255,0.08);
+border-radius:22px;
+padding:20px;
+backdrop-filter:blur(10px);
+transition:.4s;
+display:flex;
+flex-direction:column;
+align-items:center;
+height:100%;
 }
 
 .app:hover{
-  transform:translateY(-6px);
+transform:translateY(-6px);
 }
 
-/* APP LOGO IMAGE */
+/* LOGO */
+
 .app-logo{
-  width:90px;
-  height:90px;
-  object-fit:contain;
-  margin-bottom:10px;
-  animation:float 3s ease-in-out infinite;
+width:90px;
+height:90px;
+object-fit:contain;
+margin-bottom:10px;
+animation:float 3s ease-in-out infinite;
 }
 
 @keyframes float{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-8px)}
-  100%{transform:translateY(0)}
+0%{transform:translateY(0)}
+50%{transform:translateY(-8px)}
+100%{transform:translateY(0)}
+}
+
+/* TITLE */
+
+.app-title{
+margin:10px 0 5px;
 }
 
 /* DESCRIPTION */
+
 .app p{
-  font-size:14px;
-  margin-bottom:12px;
-  opacity:0.9;
+font-size:14px;
+opacity:0.9;
+flex-grow:1;
+}
+
+/* BUTTON ROW */
+
+.download-row{
+display:flex;
+gap:10px;
+width:100%;
+margin-top:auto;
 }
 
 /* DOWNLOAD BUTTON */
+
 .download{
-  display:inline-block;
-  margin-top:10px;
-  padding:10px 25px;
-  background:#25d366;
-  color:#000;
-  text-decoration:none;
-  border-radius:30px;
-  font-weight:700;
-  transition:.3s;
+flex:1;
+padding:10px;
+background:#25d366;
+color:#000;
+text-decoration:none;
+border-radius:12px;
+font-weight:700;
+transition:.3s;
 }
 
 .download:hover{
-  box-shadow:0 0 20px rgba(37,211,102,.7);
-  transform:scale(1.05);
+box-shadow:0 0 15px rgba(37,211,102,.7);
 }
 
-/* DOWNLOADER CODE */
+/* CODE BOX */
+
 .code-box{
-  margin-top:12px;
-  background:#111;
-  border-radius:14px;
-  padding:12px 18px;
-  font-family:monospace;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  width:100%;
+flex:1;
+background:#111;
+border-radius:12px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:8px;
 }
 
 .code-box span{
-  font-size:16px;
-  letter-spacing:2px;
+font-size:15px;
 }
 
 /* COPY BUTTON */
+
 .copy-btn{
-  background:#25d366;
-  border:none;
-  padding:6px 12px;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:700;
-  transition:.3s;
+background:#25d366;
+border:none;
+padding:5px 10px;
+border-radius:8px;
+cursor:pointer;
+font-weight:700;
 }
 
 .copy-btn:active{
-  transform:scale(.95);
+transform:scale(.95);
 }
 
 /* FOOTER */
+
 footer{
-  margin:40px 0 20px;
-  font-size:14px;
-  opacity:.7;
+margin:40px 0 20px;
+opacity:.7;
 }
+
 </style>
 </head>
 
@@ -162,9 +184,7 @@ footer{
 
 <div class="main-logo">Balkan Media</div>
 
-<h1>
-<i class="fas fa-layer-group"></i> Ostale aplikacije
-</h1>
+<h1><i class="fas fa-layer-group"></i> Ostale aplikacije</h1>
 
 <p>Direktno preuzimanje ili Downloader kod</p>
 
@@ -172,188 +192,121 @@ footer{
 
 <div class="container">
 
-  <!-- APP 1 -->
-  <div class="app">
-    <img src="images/Downloader.png" alt="Downloader" class="app-logo">
-    <h3 class="app-title">Downloader</h3>
-    <p>Downloader je program za preuzimanje fajlova i APK-ova za Fire TV, Android TV, Google TV i Android uređaje</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/ui6vtlkRbimB6Ya/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code1">148534</span>
-      <button class="copy-btn" onclick="copyCode('code1', this)">Kopiraj</button>
-    </div>
-  </div>
+<!-- APP TEMPLATE -->
 
-  <!-- APP 2 -->
-  <div class="app">
-    <img src="images/smarttube.png" alt="smarttube" class="app-logo">
-    <h3 class="app-title">Smart Tube</h3>
-    <p>Nezvanični YouTube klijent bez reklama za Android TV</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/AMiZnC3UXSJX59g/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code2">5143591</span>
-      <button class="copy-btn" onclick="copyCode('code2', this)">Kopiraj</button>
-    </div>
-  </div>
+<div class="app">
+<img src="images/Downloader.png" class="app-logo">
+<h3 class="app-title">Downloader</h3>
+<p>Program za preuzimanje APK fajlova</p>
 
-  <!-- APP 3 -->
-  <div class="app">
-    <img src="images/iris SMART.png" alt="iris SMART" class="app-logo">
-    <h3 class="app-title">IRIS Smart</h3>
-    <p>iris SMART aplikacija za potpuno TV iskustvo na vašem smart TV-u!MTS aplikacija</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/RDi0Twnm2QKCqq6/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code3">1912973</span>
-      <button class="copy-btn" onclick="copyCode('code3', this)">Kopiraj</button>
-    </div>
-  </div>
+<div class="download-row">
 
-  <!-- APP 4 -->
-  <div class="app">
-    <img src="images/MOVE.png" alt="MOVE" class="app-logo">
-    <h3 class="app-title">Move</h3>
-    <p>MOVE TV aplikacija. MTS aplikacija</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/3Ky1a5B1u3CJcW0/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code4">9419423</span>
-      <button class="copy-btn" onclick="copyCode('code4', this)">Kopiraj</button>
-    </div>
-  </div>
+<a class="download" href="https://www.megadisk.net/cloud11/index.php/s/ui6vtlkRbimB6Ya/download" target="_blank">
+Preuzmi
+</a>
 
-  <!-- APP 5 -->
-  <div class="app">
-    <img src="images/EON TV.png" alt="EON TV" class="app-logo">
-    <h3 class="app-title">EON TV</h3>
-    <p>EON TV vam omogućava da gledate TV kanale i video sadržaje</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/D9eMOb6yDvhzB9V/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code5">9154449</span>
-      <button class="copy-btn" onclick="copyCode('code5', this)">Kopiraj</button>
-    </div>
-  </div>
+<div class="code-box">
+<span id="code1">148534</span>
+<button class="copy-btn" onclick="copyCode('code1',this)">Kopiraj</button>
+</div>
 
-  <!-- APP 6 -->
-  <div class="app">
-    <img src="images/X-plore File Manager.png" alt="IBO Pro" class="app-logo">
-    <h3 class="app-title">X-plore File Manager</h3>
-    <p>X-plore je dvo-prozorni fajl menadžer sa pregledom u obliku stabla, podrškom za LAN, root, cloud servise i još mnogo toga</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/tNc2M5ApnobqJS7/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code6">5207080</span>
-      <button class="copy-btn" onclick="copyCode('code6', this)">Kopiraj</button>
-    </div>
-  </div>
+</div>
+</div>
 
-  <!-- APP 7 -->
-  <div class="app">
-    <img src="images/babbc4333666da7fa6d004c9d44cf37e0f72be9d0e36e1dd3fdc25fd88b992d8_100.png" alt="SHAREit: Transfer, Share Files" class="app-logo">
-    <h3 class="app-title">SHAREit: Transfer, Share Files</h3>
-    <p>Šaljite i primajte velike fajlove i igre, preuzimajte video zapise i koristite fajl menadžer</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/4Xcbvfb6C55ZOyI/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code7">7483158</span>
-      <button class="copy-btn" onclick="copyCode('code7', this)">Kopiraj</button>
-    </div>
-  </div>
+<div class="app">
+<img src="images/smarttube.png" class="app-logo">
+<h3 class="app-title">Smart Tube</h3>
+<p>YouTube bez reklama za Android TV</p>
 
-  <!-- APP 8 -->
-  <div class="app">
-    <img src="images/Aptoide TV.png" alt="Aptoide TV" class="app-logo">
-    <h3 class="app-title">Aptoide TV</h3>
-    <p>Android aplikacija za gledanje IPTV sadržaja</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/gDxFbPFABG9CbmI/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code8">9162155</span>
-      <button class="copy-btn" onclick="copyCode('code8', this)">Kopiraj</button>
-    </div>
-  </div>
+<div class="download-row">
 
-  <!-- APP 9 -->
-  <div class="app">
-    <img src="images/Stremio.png" alt="Stremio" class="app-logo">
-    <h3 class="app-title">Stremio</h3>
-    <p>Stremio je moderan medijski centar i aplikacija za streaming filmova, serija i uživo TV-a</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/MQwWKU5skUWVGMN/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code9">4235379</span>
-      <button class="copy-btn" onclick="copyCode('code9', this)">Kopiraj</button>
-    </div>
-  </div>
+<a class="download" href="https://www.megadisk.net/cloud11/index.php/s/AMiZnC3UXSJX59g/download" target="_blank">
+Preuzmi
+</a>
 
-  <!-- APP 10 -->
-  <div class="app">
-    <img src="images/Kodi.png" alt="Kodi" class="app-logo">
-    <h3 class="app-title">Kodi</h3>
-    <p>Kodi je besplatan open-source medijski centar za organizovanje i reprodukciju video zapisa, muzike, fotografija i podcast-a na ekranima prilagođenim za TV</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/FIabFCQsedk0l2q/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code10">3708575</span>
-      <button class="copy-btn" onclick="copyCode('code10', this)">Kopiraj</button>
-    </div>
-  </div>
+<div class="code-box">
+<span id="code2">5143591</span>
+<button class="copy-btn" onclick="copyCode('code2',this)">Kopiraj</button>
+</div>
 
-    <!-- APP 11 -->
-  <div class="app">
-    <img src="images/Orion TV.png" alt="Orion TV" class="app-logo">
-    <h3 class="app-title">Orion TV</h3>
-    <p>Gledajte popularne TV kanale prilagođene za region Ex-YU na Android telefonu ili tabletu</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/SzvHhHf6MAL9dU4/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code10">9615711</span>
-      <button class="copy-btn" onclick="copyCode('code10', this)">Kopiraj</button>
-    </div>
-  </div>
+</div>
+</div>
 
-      <!-- APP 12 -->
-  <div class="app">
-    <img src="images/Netflix.png" alt="Netflix" class="app-logo">
-    <h3 class="app-title">Netflix</h3>
-    <p>Netflix (Android TV) je streaming aplikacija za TV serije, filmove, dokumentarce i stand-up nastupe</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/nOtwCuPHxLVwOsW/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code10">5283695</span>
-      <button class="copy-btn" onclick="copyCode('code10', this)">Kopiraj</button>
-    </div>
-  </div>
+<div class="app">
+<img src="images/Stremio.png" class="app-logo">
+<h3 class="app-title">Stremio</h3>
+<p>Streaming filmova i TV sadržaja</p>
 
-        <!-- APP 13 -->
-  <div class="app">
-    <img src="images/HBO Max.png" alt="HBO Max" class="app-logo">
-    <h3 class="app-title">HBO Max</h3>
-    <p>Gledajte sav HBO sadržaj sa popularnim serijama, klasičnim favoritima i Max Originals programima</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/7vzL8oKUWxAr0wl/download" target="_blank">
-      <i class="fas fa-download"></i> Direktno preuzimanje
-    </a>
-    <div class="code-box">
-      <span id="code10">3254215</span>
-      <button class="copy-btn" onclick="copyCode('code10', this)">Kopiraj</button>
-    </div>
-  </div>
+<div class="download-row">
 
+<a class="download" href="#">
+Preuzmi
+</a>
+
+<div class="code-box">
+<span id="code3">4235379</span>
+<button class="copy-btn" onclick="copyCode('code3',this)">Kopiraj</button>
+</div>
+
+</div>
+</div>
+
+<div class="app">
+<img src="images/Kodi.png" class="app-logo">
+<h3 class="app-title">Kodi</h3>
+<p>Open-source media centar</p>
+
+<div class="download-row">
+
+<a class="download" href="#">
+Preuzmi
+</a>
+
+<div class="code-box">
+<span id="code4">3708575</span>
+<button class="copy-btn" onclick="copyCode('code4',this)">Kopiraj</button>
+</div>
+
+</div>
+</div>
+
+<div class="app">
+<img src="images/Netflix.png" class="app-logo">
+<h3 class="app-title">Netflix</h3>
+<p>Streaming filmova i serija</p>
+
+<div class="download-row">
+
+<a class="download" href="#">
+Preuzmi
+</a>
+
+<div class="code-box">
+<span id="code5">5283695</span>
+<button class="copy-btn" onclick="copyCode('code5',this)">Kopiraj</button>
+</div>
+
+</div>
+</div>
+
+<div class="app">
+<img src="images/HBO Max.png" class="app-logo">
+<h3 class="app-title">HBO Max</h3>
+<p>Streaming HBO sadržaja</p>
+
+<div class="download-row">
+
+<a class="download" href="#">
+Preuzmi
+</a>
+
+<div class="code-box">
+<span id="code6">3254215</span>
+<button class="copy-btn" onclick="copyCode('code6',this)">Kopiraj</button>
+</div>
+
+</div>
+</div>
 
 </div>
 
@@ -363,27 +316,17 @@ footer{
 
 <script>
 
-function copyCode(id, btn){
+function copyCode(id,btn){
 
-const text = document.getElementById(id).innerText;
+const text=document.getElementById(id).innerText;
 
-navigator.clipboard.writeText(text).then(()=>{
+navigator.clipboard.writeText(text);
 
-const original = btn.innerHTML;
-
-btn.innerHTML="✔ Kopirano";
-
-btn.style.background="#1fa855";
+btn.innerHTML="✔";
 
 setTimeout(()=>{
-
-btn.innerHTML=original;
-
-btn.style.background="#25d366";
-
-},2000);
-
-});
+btn.innerHTML="Kopiraj";
+},1500);
 
 }
 
